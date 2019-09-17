@@ -9,19 +9,21 @@
 import UIKit
 
 // the picture will use the name string to instantiate 
-class Person {
+class Person: Codable {
     
     let name: String
     let origin: String
-    let funFact: String
+    let favoriteMovie: String
     let favoriteSuperHero: String
-    var isFavorite: Bool?
+    var isFavorite: Bool
     
-    init(name: String, origin: String, funFact: String, favoriteSuperHero: String, isFavorite: Bool) {
+    init(name: String, origin: String, favoriteMovie: String, favoriteSuperHero: String, isFavorite: Bool) {
         
         self.name = name
         self.origin = origin
-        self.funFact = funFact
+        self.favoriteMovie = favoriteMovie
         self.favoriteSuperHero = favoriteSuperHero
+        self.isFavorite = isFavorite
     }
 }
+

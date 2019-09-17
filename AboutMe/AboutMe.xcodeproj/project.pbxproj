@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25C82396233141DE00FAE3D9 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C82395233141DE00FAE3D9 /* PersonController.swift */; };
+		25C8239F2331558000FAE3D9 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C8239E2331558000FAE3D9 /* PersonViewController.swift */; };
 		428FD75423313F650010DB92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FD75323313F650010DB92 /* AppDelegate.swift */; };
 		428FD75923313F650010DB92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428FD75723313F650010DB92 /* Main.storyboard */; };
 		428FD75B23313F660010DB92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428FD75A23313F660010DB92 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		25C82395233141DE00FAE3D9 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		25C8239E2331558000FAE3D9 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		428FD75023313F650010DB92 /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428FD75323313F650010DB92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428FD75823313F650010DB92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25C82397233145F100FAE3D9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				428FD75F23313F660010DB92 /* Info.plist */,
+				428FD75323313F650010DB92 /* AppDelegate.swift */,
+				428FD75A23313F660010DB92 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25C823982331461A00FAE3D9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				428FD75723313F650010DB92 /* Main.storyboard */,
+				428FD75C23313F660010DB92 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		25C8239B23314D0B00FAE3D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25C8239E2331558000FAE3D9 /* PersonViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		428FD74723313F650010DB92 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +85,11 @@
 		428FD75223313F650010DB92 /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
+				25C8239B23314D0B00FAE3D9 /* Views */,
+				25C823982331461A00FAE3D9 /* UI */,
+				25C82397233145F100FAE3D9 /* Resources */,
+				428FD768233142850010DB92 /* Model Controller */,
 				428FD767233141F00010DB92 /* Model */,
-				428FD75323313F650010DB92 /* AppDelegate.swift */,
-				428FD75723313F650010DB92 /* Main.storyboard */,
-				428FD75A23313F660010DB92 /* Assets.xcassets */,
-				428FD75C23313F660010DB92 /* LaunchScreen.storyboard */,
-				428FD75F23313F660010DB92 /* Info.plist */,
-				25C82395233141DE00FAE3D9 /* PersonController.swift */,
 			);
 			path = AboutMe;
 			sourceTree = "<group>";
@@ -71,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				428FD765233141EB0010DB92 /* Person.swift */,
-				428FD768233142850010DB92 /* Model Controller */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -79,8 +105,10 @@
 		428FD768233142850010DB92 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				25C82395233141DE00FAE3D9 /* PersonController.swift */,
 			);
-			path = "Model Controller";
+			name = "Model Controller";
+			path = "Model/Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +185,7 @@
 				428FD766233141EB0010DB92 /* Person.swift in Sources */,
 				25C82396233141DE00FAE3D9 /* PersonController.swift in Sources */,
 				428FD75423313F650010DB92 /* AppDelegate.swift in Sources */,
+				25C8239F2331558000FAE3D9 /* PersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +333,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR48EZC8Y4;
-				INFOPLIST_FILE = AboutMe/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AboutMe/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR48EZC8Y4;
-				INFOPLIST_FILE = AboutMe/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AboutMe/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
