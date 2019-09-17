@@ -21,7 +21,7 @@ class Person: Codable {
         
         self.name = name
         self.origin = origin
-        self.favoriteMovie = funFact
+        self.favoriteMovie = favoriteMovie
         self.favoriteSuperHero = favoriteSuperHero
     }
 }
