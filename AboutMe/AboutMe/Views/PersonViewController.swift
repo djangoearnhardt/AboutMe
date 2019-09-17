@@ -27,6 +27,8 @@ class PersonViewController: UIViewController, UICollectionViewDelegate, UICollec
         carouselCollectionView.delegate = self
         carouselCollectionView.dataSource = self
         carouselCollectionView.isUserInteractionEnabled = false
+        PersonController.shared.loadFromPersistentStore()
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -41,7 +43,6 @@ class PersonViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouCell", for: indexPath) as? PersonCollectionViewCell else {return UICollectionViewCell()}
         cell.layer.cornerRadius = 12
-        cell.backgroundColor = Cells.colors[indexPath.row]
         let person = PersonController.shared.personArray[indexPath.row]
         cell.update(person: person)
         return cell
@@ -56,26 +57,20 @@ class PersonViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBAction func heartButtonTapped(_ sender: Any) {
         print(selectedIndex)
-        //        PersonController.shared.modify(person: <#T##Person#>)
     }
     
     /// Updates selectedIndex and then scrolls to it. Guards against overflowing too high or low.
     @IBAction func scrollButtonTapped(_ sender: UIButton) {
         if sender.tag == 0 { // LEFT
-            selectedIndex = selectedIndex > 0 ? selectedIndex : Cells.colors.count
+            selectedIndex = selectedIndex > 0 ? selectedIndex : PersonController.shared.personArray.count
             selectedIndex -= 1
             let indexPath = IndexPath(row: selectedIndex, section: 0)
             carouselCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         } else { // RIGHT
-            selectedIndex = selectedIndex < Cells.colors.count - 1 ? selectedIndex : -1
+            selectedIndex = selectedIndex < PersonController.shared.personArray.count - 1 ? selectedIndex : -1
             selectedIndex += 1
             let indexPath = IndexPath(row: selectedIndex, section: 0)
             carouselCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
     }
-}
-
-/// Model and ModelController mixed into one.
-struct Cells {
-    static let colors: [UIColor] = [#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1), #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)]
 }
