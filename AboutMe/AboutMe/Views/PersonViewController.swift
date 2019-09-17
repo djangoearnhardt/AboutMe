@@ -28,11 +28,14 @@ class PersonViewController: UIViewController, UICollectionViewDelegate, UICollec
         carouselCollectionView.dataSource = self
         carouselCollectionView.isUserInteractionEnabled = false
         PersonController.shared.loadFromPersistentStore()
-        
+        if PersonController.shared.personArray[selectedIndex].isFavorite{
+            heartButton.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Filled Heart"))
+        } else {
+            heartButton.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Empty Heart"))
+        }
     }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .default
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -56,9 +59,14 @@ class PersonViewController: UIViewController, UICollectionViewDelegate, UICollec
     //MARK: - ACTIONS
     
     @IBAction func heartButtonTapped(_ sender: Any) {
-        print(selectedIndex)
+        PersonController.shared.personArray[selectedIndex].isFavorite.toggle()
+        if PersonController.shared.personArray[selectedIndex].isFavorite{
+             heartButton.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Filled Heart"))
+        } else {
+        heartButton.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Empty Heart"))
+            PersonController.shared.saveToPersistentStore()
     }
-    
+    }
     /// Updates selectedIndex and then scrolls to it. Guards against overflowing too high or low.
     @IBAction func scrollButtonTapped(_ sender: UIButton) {
         if sender.tag == 0 { // LEFT
@@ -72,5 +80,11 @@ class PersonViewController: UIViewController, UICollectionViewDelegate, UICollec
             let indexPath = IndexPath(row: selectedIndex, section: 0)
             carouselCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
+        
+        if PersonController.shared.personArray[selectedIndex].isFavorite{
+            heartButton.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Filled Heart"))
+        } else {
+            heartButton.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Empty Heart"))
     }
+}
 }
