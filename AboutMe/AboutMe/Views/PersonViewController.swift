@@ -15,6 +15,8 @@ class PersonViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var heartButton: UIButton!
     
     @IBOutlet weak var carouselCollectionView: UICollectionView!
+    
+    
     /// Tracks the currently centered cell index.
     var selectedIndex = 0
     
@@ -36,9 +38,11 @@ class PersonViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouCell", for: indexPath) as? PersonCollectionViewCell else {return UICollectionViewCell()}
         cell.layer.cornerRadius = 12
         cell.backgroundColor = Cells.colors[indexPath.row]
+        let person = PersonController.shared.personArray[indexPath.row]
+        cell.update(person: person)
         return cell
     }
     
