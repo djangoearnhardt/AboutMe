@@ -13,8 +13,12 @@ class PersonController {
     //singleton
     static let shared = PersonController()
     // source of truth
-    static let personArray:[Person] = []
+    var personArray:[Person] = []
     
+    
+    func createPerson(name:String,origin:String,funFact:String, superHero: String, isFavorite: Bool){
+        let newPerson = Person(name: name, origin: origin, funFact: funFact, favoriteSuperHero: superHero, isFavorite: isFavorite)
+    }
     
     
     
@@ -41,7 +45,7 @@ class PersonController {
         //now this can sometimes throw an error so we need to do a do try catch
         do{
             //this little guy puts it into computer lingo
-            let data = try encoder.encode(PersonController.shared.personArray)
+            let data = try encoder.encode(personArray)
             //this guy writes it
             try data.write(to: fileURL())
         } catch{
