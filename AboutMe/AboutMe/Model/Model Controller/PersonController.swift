@@ -16,11 +16,20 @@ class PersonController {
     var personArray:[Person] = []
     
     init() {
-        //load data if there is any
+
+        loadFromPersistentStore()
         
-        //if no data, initialize person array
-//        personArray = [
-//        Person(name: <#T##String#>, origin: <#T##String#>, favoriteMovie: <#T##String#>, favoriteSuperHero: <#T##String#>, isFavorite: <#T##Bool#>)]
+        if self.personArray.isEmpty {
+        personArray = [
+        Person(name: "Tony Shell", origin: "I’m from Utah and I can bark like a dog.", favoriteMovie: "Deadpool", favoriteSuperHero: "Deadpool", isFavorite: false),
+        Person(name: "Sam LoBue", origin: "Musician turned iOS Developer from Charlotte, NC", favoriteMovie: "The Prestige", favoriteSuperHero: "Gambit", isFavorite: false),
+        Person(name: "Michael Killpack", origin: "I am from Murray, Utah. I like to play tennis and fish.", favoriteMovie: "Lonesome Dove", favoriteSuperHero: "Flash Gordon", isFavorite: false),
+        Person(name: "Jeremy Ashby", origin: "I’m a learning UX designer looking to get some more experience of my own. I can lick my elbow.", favoriteMovie: "The Princess Bride", favoriteSuperHero: "Spiderman", isFavorite: false),
+        Person(name: "Ian Hall", origin: "Hi I’m Ian and I like tacos and pizza. In my spare time I fight evil ninjas and make smoothies. So hit that heart button :wink:", favoriteMovie: "Star Wars Episode 3", favoriteSuperHero: "BATMAN", isFavorite: false),
+        Person(name: "Daniel Peng", origin: "QA student from Pennsylvania", favoriteMovie: "Inception", favoriteSuperHero: "Iron Man", isFavorite: false)
+        ]
+
+        }
     }
     
     func modify(person: Person){
