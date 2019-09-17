@@ -15,6 +15,9 @@
 		428FD75B23313F660010DB92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428FD75A23313F660010DB92 /* Assets.xcassets */; };
 		428FD75E23313F660010DB92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428FD75C23313F660010DB92 /* LaunchScreen.storyboard */; };
 		428FD766233141EB0010DB92 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FD765233141EB0010DB92 /* Person.swift */; };
+		428FD76D233161E70010DB92 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 428FD76C233161E70010DB92 /* Nunito-Regular.ttf */; };
+		428FD770233162A00010DB92 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FD76F233162A00010DB92 /* StyleGuide.swift */; };
+		428FD772233163DB0010DB92 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428FD771233163DB0010DB92 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		428FD75D23313F660010DB92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		428FD75F23313F660010DB92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		428FD765233141EB0010DB92 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		428FD76C233161E70010DB92 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		428FD76F233162A00010DB92 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
+		428FD771233163DB0010DB92 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,8 @@
 				428FD75F23313F660010DB92 /* Info.plist */,
 				428FD75323313F650010DB92 /* AppDelegate.swift */,
 				428FD75A23313F660010DB92 /* Assets.xcassets */,
+				428FD771233163DB0010DB92 /* Colors.xcassets */,
+				428FD76B233161B40010DB92 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 			children = (
 				25C8239B23314D0B00FAE3D9 /* Views */,
 				25C823982331461A00FAE3D9 /* UI */,
+				428FD76E2331627E0010DB92 /* Custom UI */,
 				25C82397233145F100FAE3D9 /* Resources */,
 				428FD768233142850010DB92 /* Model Controller */,
 				428FD767233141F00010DB92 /* Model */,
@@ -112,6 +121,22 @@
 			);
 			name = "Model Controller";
 			path = "Model/Model Controller";
+			sourceTree = "<group>";
+		};
+		428FD76B233161B40010DB92 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				428FD76C233161E70010DB92 /* Nunito-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		428FD76E2331627E0010DB92 /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				428FD76F233162A00010DB92 /* StyleGuide.swift */,
+			);
+			path = "Custom UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +197,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428FD772233163DB0010DB92 /* Colors.xcassets in Resources */,
 				428FD75E23313F660010DB92 /* LaunchScreen.storyboard in Resources */,
 				428FD75B23313F660010DB92 /* Assets.xcassets in Resources */,
+				428FD76D233161E70010DB92 /* Nunito-Regular.ttf in Resources */,
 				428FD75923313F650010DB92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +214,7 @@
 			files = (
 				428FD766233141EB0010DB92 /* Person.swift in Sources */,
 				25C82396233141DE00FAE3D9 /* PersonController.swift in Sources */,
+				428FD770233162A00010DB92 /* StyleGuide.swift in Sources */,
 				428FD75423313F650010DB92 /* AppDelegate.swift in Sources */,
 				25C8239F2331558000FAE3D9 /* PersonViewController.swift in Sources */,
 				25C823A123315AC100FAE3D9 /* PersonCollectionViewCell.swift in Sources */,
