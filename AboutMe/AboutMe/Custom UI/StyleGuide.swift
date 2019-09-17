@@ -16,6 +16,12 @@ extension UIView {
         layer.cornerRadius = frame.width / 2
     }
     
+    func addAccentBorder(width: CGFloat = 1.5, color: UIColor = .flashGordonGold) {
+        
+        layer.borderWidth = width
+        layer.borderColor = color.cgColor
+    }
+    
 }
 
 extension UIColor {
@@ -24,6 +30,7 @@ extension UIColor {
     static let dynamicYellow = UIColor(named: "dynamicYellow")!
     static let powerfulTangerine = UIColor(named: "powerfulTangerine")!
     static let superheroBlue = UIColor(named: "superheroBlue")!
+    static let flashGordonGold = UIColor(named: "flashGordonGold")!
 }
 
 struct FontName {
