@@ -16,7 +16,7 @@ class PersonController {
     var personArray:[Person] = []
     
     init() {
-
+        saveToPersistentStore()
         loadFromPersistentStore()
         
         if self.personArray.isEmpty {
