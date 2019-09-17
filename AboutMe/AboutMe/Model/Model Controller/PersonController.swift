@@ -15,9 +15,16 @@ class PersonController {
     // source of truth
     var personArray:[Person] = []
     
+    init() {
+        //load data if there is any
+        
+        //if no data, initialize person array
+        personArray = [
+        Person(name: <#T##String#>, origin: <#T##String#>, favoriteMovie: <#T##String#>, favoriteSuperHero: <#T##String#>, isFavorite: <#T##Bool#>)]
+    }
     
-    func createPerson(name:String,origin:String,funFact:String, superHero: String, isFavorite: Bool){
-        let newPerson = Person(name: name, origin: origin, funFact: funFact, favoriteSuperHero: superHero, isFavorite: isFavorite)
+    func createPerson(name:String,origin:String, favoriteMovie:String, superHero: String, isFavorite: Bool){
+        let newPerson = Person(name: name, origin: origin, favoriteMovie: favoriteMovie, favoriteSuperHero: superHero, isFavorite: isFavorite)
     }
     
     
