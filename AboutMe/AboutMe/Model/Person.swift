@@ -9,7 +9,7 @@
 import UIKit
 
 // the picture will use the name string to instantiate 
-class Person {
+class Person: Codable {
     
     let name: String
     let origin: String
@@ -25,3 +25,4 @@ class Person {
         self.favoriteSuperHero = favoriteSuperHero
     }
 }
+
