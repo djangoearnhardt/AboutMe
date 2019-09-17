@@ -18,9 +18,18 @@ class PersonController {
     
     func createPerson(name:String,origin:String,funFact:String, superHero: String, isFavorite: Bool){
         let newPerson = Person(name: name, origin: origin, funFact: funFact, favoriteSuperHero: superHero, isFavorite: isFavorite)
+        personArray.append(newPerson)
+        saveToPersistentStore()
     }
     
-    
+    func modify(person: Person){
+        if person.isFavorite {
+            person.isFavorite = false
+        } else {
+            person.isFavorite = true
+        }
+        saveToPersistentStore()
+    }
     
     //MARK: - Persistence
     
@@ -58,10 +67,10 @@ class PersonController {
         let decoder = JSONDecoder()
         do {
             let data = try Data(contentsOf: fileURL())
-            let playlists = try decoder.decode([Person].self, from: data)
-            //SAVE THIS AS THE SINGLETON SO self.playlists = playlists
-        } catch let erro {
-            print(erro)
+            let peopleArray = try decoder.decode([Person].self, from: data)
+            personArray = peopleArray
+        } catch {
+            print(print("there was an error in \(#function) :\(error) : \(error.localizedDescription)"))
         }
     }
     
