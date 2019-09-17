@@ -79,7 +79,7 @@
                                                         <constraint firstAttribute="height" constant="288" id="VE4-hP-xxc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="t5H-K1-cc6">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="t5H-K1-cc6">
                                                     <rect key="frame" x="62.5" y="346" width="288" height="118"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(NAME LABEL)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8A-Y0-iG9">
@@ -117,6 +117,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="dbV-t4-ohY" firstAttribute="centerX" secondItem="vlL-nW-WJX" secondAttribute="centerX" id="39N-p1-jLP"/>
+                                            <constraint firstItem="t5H-K1-cc6" firstAttribute="top" secondItem="dbV-t4-ohY" secondAttribute="bottom" constant="23.5" id="7sj-Di-Hlv"/>
                                             <constraint firstItem="t5H-K1-cc6" firstAttribute="width" secondItem="dbV-t4-ohY" secondAttribute="width" id="F4r-I1-Avi"/>
                                             <constraint firstItem="t5H-K1-cc6" firstAttribute="leading" secondItem="dbV-t4-ohY" secondAttribute="leading" id="XEr-VT-njc"/>
                                             <constraint firstItem="dbV-t4-ohY" firstAttribute="centerY" secondItem="vlL-nW-WJX" secondAttribute="centerY" multiplier="0.7" id="nKn-h2-Fsl"/>
