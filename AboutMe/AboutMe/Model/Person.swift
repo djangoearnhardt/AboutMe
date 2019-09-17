@@ -23,6 +23,7 @@ class Person: Codable {
         self.origin = origin
         self.favoriteMovie = favoriteMovie
         self.favoriteSuperHero = favoriteSuperHero
+        self.isFavorite = isFavorite
     }
 }
 
