@@ -15,7 +15,7 @@ class Person: Codable {
     let origin: String
     let funFact: String
     let favoriteSuperHero: String
-    var isFavorite: Bool?
+    var isFavorite: Bool
     
     init(name: String, origin: String, funFact: String, favoriteSuperHero: String, isFavorite: Bool) {
         
@@ -23,6 +23,7 @@ class Person: Codable {
         self.origin = origin
         self.funFact = funFact
         self.favoriteSuperHero = favoriteSuperHero
+        self.isFavorite = isFavorite
     }
 }
 
