@@ -12,6 +12,7 @@
 		428FD75923313F650010DB92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428FD75723313F650010DB92 /* Main.storyboard */; };
 		428FD75B23313F660010DB92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428FD75A23313F660010DB92 /* Assets.xcassets */; };
 		428FD75E23313F660010DB92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428FD75C23313F660010DB92 /* LaunchScreen.storyboard */; };
+		428FD766233141EB0010DB92 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FD765233141EB0010DB92 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		428FD75A23313F660010DB92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		428FD75D23313F660010DB92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		428FD75F23313F660010DB92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		428FD765233141EB0010DB92 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		428FD75223313F650010DB92 /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
+				428FD767233141F00010DB92 /* Model */,
 				428FD75323313F650010DB92 /* AppDelegate.swift */,
 				428FD75723313F650010DB92 /* Main.storyboard */,
 				428FD75A23313F660010DB92 /* Assets.xcassets */,
@@ -62,6 +65,22 @@
 				25C82395233141DE00FAE3D9 /* PersonController.swift */,
 			);
 			path = AboutMe;
+			sourceTree = "<group>";
+		};
+		428FD767233141F00010DB92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				428FD765233141EB0010DB92 /* Person.swift */,
+				428FD768233142850010DB92 /* Model Controller */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		428FD768233142850010DB92 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428FD766233141EB0010DB92 /* Person.swift in Sources */,
 				25C82396233141DE00FAE3D9 /* PersonController.swift in Sources */,
 				428FD75423313F650010DB92 /* AppDelegate.swift in Sources */,
 			);
